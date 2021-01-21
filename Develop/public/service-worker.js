@@ -6,5 +6,12 @@ const FILES_TO_CACHE = [
     '/',
     '/index.html',
     '/manifest.json',
-    ''
+    '/public/icons/icon-72x72.png',
+    '/public/icons/icon-72x72.png',
+    '/public/icons/icon-72x72.png',
+    '/public/icons/icon-72x72.png',
+    '/public/icons/icon-72x72.png',
+    '/public/icons/icon-72x72.png',
+    '/public/icons/icon-72x72.png',
+    '/public/icons/icon-72x72.png'
 ]
