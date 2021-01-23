@@ -1,4 +1,3 @@
-const { get } = require("mongoose");
 
 let db;
 
@@ -12,10 +11,10 @@ request.onupgradeneeded = function(event){
 
 //finalize connection
 request.onsuccess = function(event){
-    db.event.target.result;
+    db = event.target.result;
     
     if(navigator.onLine){
-
+        uploadTransaction();
     }
 };
 
@@ -36,11 +35,11 @@ function uploadTransaction (){
     const transaction = db.transaction(['new_transaction'], 'readwrite');
     const transactionObjectStore = transaction.objectStore('new_transaction');
     const getAll = transactionObjectStore.getAll();
-//GO OVER WITH TUTOR ==========================================
+
+
     getAll.onsuccess = function(){
-        if(get.result.length > 0){
-            //dont know about this one
-            fetch('/api/', {
+        if(getAll.result.length > 0){
+            fetch('/api/transaction/bulk', {
                 method: 'POST',
                 body: JSON.stringify(getAll.result),
                 headers: {
