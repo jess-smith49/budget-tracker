@@ -16,4 +16,4 @@ At this time, there will be no future development.
 [Heroku](https://desolate-woodland-44041.herokuapp.com/)
 
 ## Screenshot
-![Budget Tracker GUI](./public/assets/images/gui.png)
+![Budget Tracker GUI](./public/images/gui.png)
